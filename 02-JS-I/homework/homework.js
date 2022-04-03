@@ -42,7 +42,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  let res = y - x;
+  let res = x - y;
   return res;
 }
 
@@ -107,7 +107,7 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  let res = Math.round(x / y);
+  let res = Math.round(x % y);
   return res;
 }
 
@@ -181,7 +181,9 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero < 0) {
+  if (numero === 0) {
+    return false;
+  } else if (numero > 0) {
     return "Es positivo";
   } else {
     return "Es negativo";
