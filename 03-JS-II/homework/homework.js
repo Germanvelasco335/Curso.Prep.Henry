@@ -21,7 +21,7 @@ function mayoriaDeEdad(edad) {
   if (edad >= 18) {
     return "Allowed";
   } else {
-    return "Not allwed";
+    return "Not allowed";
   }
 }
   
@@ -146,8 +146,8 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1 === 0 || num2 === 0 || num3 === 0) {
-    return "Error"
-  } else if (num1 < 0 && num2 < 0 && num3 < 0) {
+    return "Error";
+  } else if (num1 < 0 || num2 < 0 || num3 < 0) {
     return "Hay negativos";
   } else if (num3 > num1 && num3 > num2) {
     num3++;
@@ -183,12 +183,12 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí 
-  for (let i = 0; i <= 10; i++) {
-    num = 6;
-    array = [num * i];
-    view = console.log(array);
+  //Escribe tu código aquí
+  let array = [];
+  for(let i = 0; i <= 10; i++) {
+    array[i] = 6 * i;
   }
+  return array;
 }
 
 function tieneTresDigitos(numero = Number.isInteger(numero)){
@@ -204,12 +204,12 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var i = 5;
+  var i = 1;
   do {
-    numero = numero + i;
+    numero = numero + 5;
     i++
   } while (i <= 8);
-  return numero
+  return numero;
 }
 
 
